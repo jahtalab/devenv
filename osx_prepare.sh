@@ -12,3 +12,5 @@ fi' >> ~/.bash_profile
 
 
 echo 'function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*; }' >> ~/.bashrc
+
+git config --global credential.helper osxkeychain
