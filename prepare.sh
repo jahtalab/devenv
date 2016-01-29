@@ -8,11 +8,11 @@ npm install -g gulp --loglevel=warn
 
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
 
-echo -e '\nsource ~/.git-prompt.sh\n' >> ~/.bashrc
+perl -p -i -e 'eof && s/$/\nsource ~\/.git-prompt.sh\n/;' ~/.bashrc
 echo 'export PS1="\u@\h \W\[\033[32m\]\$(__git_ps1  \" (%s)\")\[\033[00m\] $ "' >> ~/.bashrc
 
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.sh
-echo -e '\nsource ~/.git-completion.sh' >> ~/.bashrc
+perl -p -i -e 'eof && s/$/\nsource ~\/.git-completion.sh\n/;' ~/.bashrc
 
 
 
