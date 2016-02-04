@@ -4,6 +4,10 @@ export NPM_CONFIG_LOGLEVEL=warn
 npm config set loglevel warn
 npm install -g gulp --loglevel=warn
 
+
+git config --global user.email "h.jahtalab@gmail.com"
+git config --global user.name "Hamidreza Jahtalab"
+
 # git helpers
 
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
