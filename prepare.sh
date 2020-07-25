@@ -1,8 +1,4 @@
-# node deps
 
-export NPM_CONFIG_LOGLEVEL=warn
-npm config set loglevel warn
-npm install -g gulp --loglevel=warn
 
 
 git config --global user.email "h.jahtalab@gmail.com"
@@ -10,13 +6,15 @@ git config --global user.name "Hamidreza Jahtalab"
 
 # git helpers
 
+echo "# Dev Bash -- Do not edit" > ~/.bashdev
+
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
 
-perl -p -i -e 'eof && s/$/\nsource ~\/.git-prompt.sh\n/;' ~/.bashrc
-echo 'export PS1="\u@\h \W\[\033[32m\]\$(__git_ps1  \" (%s)\")\[\033[00m\] $ "' >> ~/.bashrc
+perl -p -i -e 'eof && s/$/\nsource ~\/.git-prompt.sh\n/;' ~/.bashdev
+echo 'export PS1="\u@\h \W\[\033[32m\]\$(__git_ps1  \" (%s)\")\[\033[00m\] $ "' >> ~/.bashdev
 
 curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.sh
-perl -p -i -e 'eof && s/$/\nsource ~\/.git-completion.sh\n/;' ~/.bashrc
+perl -p -i -e 'eof && s/$/\nsource ~\/.git-completion.sh\n/;' ~/.bashdev
 
 
 
@@ -59,4 +57,9 @@ __git_complete gco _git_checkout
 # Git log find by commit message
 function glf() { git log --all --grep=\"$1\"; }
 
+" >> ~/.bashdev
+
+
+echo "
+source ~/.bashdev
 " >> ~/.bashrc
