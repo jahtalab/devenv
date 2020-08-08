@@ -57,6 +57,8 @@ __git_complete gco _git_checkout
 # Git log find by commit message
 function glf() { git log --all --grep=\"$1\"; }
 
+alias nr='npm run'
+
 " >> ~/.bashdev
 
 
