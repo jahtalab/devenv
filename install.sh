@@ -34,3 +34,10 @@ sudo chmod +x /usr/local/bin/docker-compose
 # nvm
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+
+# keyring
+# sudo apt-get install -y libgnome-keyring-dev
+# sudo make --directory=/usr/share/doc/git/contrib/credential/gnome-keyring
+
+# git config --global credential.helper /usr/share/doc/git/contrib/credential/gnome-keyring/git-credential-gnome-keyring
